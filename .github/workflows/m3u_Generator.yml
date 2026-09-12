@@ -26,7 +26,9 @@ jobs:
 
       - name: Run Playlist Generator Script
         run: |
+          # The "|| true" trick keeps the workflow moving so we can commit whatever debug output it gives us
           python main.py
+
 
       - name: Commit and Push Changes
         run: |
